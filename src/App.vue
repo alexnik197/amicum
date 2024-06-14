@@ -1,5 +1,5 @@
 <script>
-import EmployeeMenu from "./components/EmployeeMenu.vue";
+import EmployeeMenu from "@/components/EmployeeMenu.vue";
 
 export default {
   components: {
@@ -20,19 +20,19 @@ export default {
 </template>
 
 <style lang="scss">
-@import "./assets/styles/main.scss";
-@import "./assets/styles/variables.scss";
+@import "@/assets/styles/main.scss";
+@import "@/assets/styles/variables.scss";
 
 #app {
   display: flex;
   flex-direction: row;
   width: 1920px;
-  height: 720px;
+  height: 1080px;
   background-color: $theme-dark;
   color: $theme-light;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-@import "./assets/styles/media.scss";
+@import "@/assets/styles/media.scss";
 </style>

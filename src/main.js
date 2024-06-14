@@ -1,5 +1,11 @@
 import { createApp } from "vue";
-import "./style.css";
 import App from "./App.vue";
+import { users } from "./data/user-data.js";
 
-createApp(App).mount("#app");
+import "./style.css";
+
+const app = createApp(App);
+
+app.config.globalProperties.$users = users;
+
+app.mount("#app");

@@ -8,10 +8,6 @@
         this.currentMinutes > 9
           ? this.currentMinutes
           : "0" + this.currentMinutes
-      }}:{{
-        this.currentSeconds > 9
-          ? this.currentSeconds
-          : "0" + this.currentSeconds
       }}</span
     >
   </div>
@@ -26,7 +22,6 @@ export default {
       currentDate: this.getCurrentDate(),
       currentHours: this.getCurrentHours(),
       currentMinutes: this.getCurrentMinutes(),
-      currentSeconds: this.getCurrentSeconds(),
     };
   },
   methods: {
@@ -39,14 +34,11 @@ export default {
     getCurrentMinutes() {
       return new Date().getMinutes();
     },
-    getCurrentSeconds() {
-      return new Date().getSeconds();
-    },
+
     updateTime() {
       this.currentDate = this.getCurrentDate();
       this.currentHours = this.getCurrentHours();
       this.currentMinutes = this.getCurrentMinutes();
-      this.currentSeconds = this.getCurrentSeconds();
     },
   },
 
@@ -65,6 +57,9 @@ export default {
   flex-direction: column;
   justify-content: space-between;
   align-items: start;
+
+  height: max-content;
+
   gap: 5px;
 }
 </style>
