@@ -58,20 +58,23 @@ export default {
                      a 15.9155 15.9155 0 0 1 0 -31.831"
         />
       </svg>
-
-      <img
-        v-if="imageSrc"
-        class="indicator-image"
-        :src="imageSrc"
-        alt="image"
-      />
-      <span v-else-if="testsCompleted" class="indicator-percent">{{
-        testsCompleted
-      }}</span>
-      <span v-else-if="AttestationDays" class="indicator-percent">{{
-        AttestationDays
-      }}</span>
+      <div class="indicator-center">
+        <img
+          v-if="imageSrc"
+          class="indicator-image"
+          :src="imageSrc"
+          alt="image"
+        />
+        <span v-else-if="testsCompleted" class="indicator-percent">
+          {{ testsCompleted }}
+        </span>
+        <span v-else-if="AttestationDays" class="indicator-percent">
+          {{ AttestationDays }}
+        </span>
+      </div>
+      <!-- .indicator-center -->
     </div>
+    <!-- /.donut-chart -->
   </div>
 </template>
 
@@ -90,6 +93,17 @@ export default {
     padding: 30px;
 
     background-color: $menu-secondary;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+  }
+  &-center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
   }
   &-name {
     text-align: center;
@@ -98,26 +112,16 @@ export default {
     font-size: 20px;
   }
   &-image {
-    position: absolute;
-    top: 27%;
-    left: 36%;
-
     width: 74px;
     height: 74px;
   }
   &-percent {
-    position: absolute;
-    top: 30%;
-    left: 37%;
-
     font-size: 45px;
   }
 }
 
 .donut-chart {
   position: relative;
-
-  width: 200px;
   height: max-content;
 }
 .circular-chart {

@@ -1,18 +1,3 @@
-<template>
-  <div class="currentDate">
-    <span>{{ this.currentDate }}</span>
-    <span
-      >{{
-        this.currentHours > 9 ? this.currentHours : "0" + this.currentHours
-      }}:{{
-        this.currentMinutes > 9
-          ? this.currentMinutes
-          : "0" + this.currentMinutes
-      }}</span
-    >
-  </div>
-</template>
-
 <script>
 export default {
   name: "ClockComponent",
@@ -51,6 +36,21 @@ export default {
 };
 </script>
 
+<template>
+  <div class="currentDate">
+    <span>{{ this.currentDate }}</span>
+    <span
+      >{{
+        this.currentHours > 9 ? this.currentHours : "0" + this.currentHours
+      }}:{{
+        this.currentMinutes > 9
+          ? this.currentMinutes
+          : "0" + this.currentMinutes
+      }}</span
+    >
+  </div>
+</template>
+
 <style lang="scss" scoped>
 .currentDate {
   display: flex;
@@ -59,6 +59,7 @@ export default {
   align-items: start;
 
   height: max-content;
+  font-size: 20px;
 
   gap: 5px;
 }

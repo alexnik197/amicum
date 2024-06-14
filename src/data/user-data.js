@@ -6,7 +6,7 @@ export const users = [
     tab: "Таб №: ГОКИ 0000",
     vacancy:
       "Электрослесарь (слесарь дежурный и по ремонту оборудования) I разряда",
-    testsCompleted: 25,
+    testsCompleted: 122,
     AttestationDays: 1825,
   },
 ];

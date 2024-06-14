@@ -32,7 +32,7 @@ export default {
       <change-theme />
     </section>
     <!-- /.theme -->
-    <section class="personal">
+    <section>
       <personal-data />
     </section>
     <!-- /.personal -->
@@ -73,6 +73,7 @@ export default {
   align-items: center;
 
   height: max-content;
+  font-size: 24px;
 
   gap: 10px;
   cursor: pointer;
